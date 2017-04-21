@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -491,16 +497,16 @@
 		"sU": 0
 		},
 	"\/bower_components\/bootstrap\/less\/bootstrap.less": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
-		"oA": 2,
-		"oAP": "\/bower_components\/bootstrap\/less\/bootstrap.less",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/bower_components\/bootstrap\/less\/bootstrap.css",
+		"oF": 3,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -661,16 +667,16 @@
 		"sU": 0
 		},
 	"\/bower_components\/bootstrap\/less\/glyphicons.less": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
-		"oA": 1,
-		"oAP": "\/bower_components\/bootstrap\/less\/glyphicons.less",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/css\/glyphicons.css",
+		"oF": 3,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -889,9 +895,9 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
-		"oA": 1,
-		"oAP": "\/bower_components\/bootstrap\/less\/mixins\/clearfix.less",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/css\/clearfix.css",
+		"oF": 3,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -1613,16 +1619,16 @@
 		"sU": 0
 		},
 	"\/bower_components\/bootstrap\/less\/utilities.less": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
-		"oA": 1,
-		"oAP": "\/bower_components\/bootstrap\/less\/utilities.less",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/css\/utilities.css",
+		"oF": 3,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -2780,6 +2786,110 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/css\/clearfix.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/clearfix-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/clearfix.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/clearfix.css.map",
+		"oF": 0
+		},
+	"\/css\/glyphicons.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/glyphicons-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/glyphicons.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/glyphicons.css.map",
+		"oF": 0
+		},
+	"\/css\/utilities.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/utilities-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/utilities.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/utilities.css.map",
+		"oF": 0
+		},
+	"\/fonts\/glyphicons-halflings-regular.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/glyphicons-halflings-regular.eot",
+		"oF": 0
+		},
+	"\/fonts\/glyphicons-halflings-regular.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/glyphicons-halflings-regular.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/glyphicons-halflings-regular.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/glyphicons-halflings-regular.ttf",
+		"oF": 0
+		},
+	"\/fonts\/glyphicons-halflings-regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/glyphicons-halflings-regular.woff",
+		"oF": 0
+		},
+	"\/fonts\/glyphicons-halflings-regular.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/glyphicons-halflings-regular.woff2",
+		"oF": 0
+		},
+	"\/images\/social-networks.png": {
+		"ft": 32768,
+		"iS": 1981,
+		"oA": 0,
+		"oAP": "\/images\/social-networks.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/visa.png": {
+		"ft": 32768,
+		"iS": 1159,
+		"oA": 0,
+		"oAP": "\/images\/visa.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/mis-saldos.html": {
 		"ft": 8192,

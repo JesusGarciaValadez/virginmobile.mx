@@ -451,8 +451,8 @@
     <div class="clear"></div>
     <!-- Contenido -->
     <div class="contenido cuenta">
-      <div class="row">
-        <aside class="col-md-2 col-xs-12">
+      <div class="row clearfix">
+        <aside class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
           <div class="cuentaBox boxSmall boxRound white row-1" style="padding-left:0; padding-right:0">
             <nav>
               <ul>
@@ -472,44 +472,34 @@
           </div>
         </aside>
 
+        <link rel="stylesheet" href="http://local.virginmobile.mx/css/bootstrap.css">
         <style>
           // Classes
-          .show { display: block !important; }
-          .hidden { display: none !important; }
-          .invisible { visibility: hidden; }
-          .pull-left { float: left !important; }
-          .pull-right { float: right !important; }
           .black {
             color: #000;
             font: normal 13px/1.2em "Avenir Next LT Pro";
           }
 
+          .cuenta p{ margin: unset; padding: 0; }
+
           #packs-section .botonLink{
             font-weight: normal;
-            line-height: 52px;
+            line-height: 18px;
             margin: 0 auto 30px;
+            font-size: 18px !important;
+            padding: 10px 35px 5px;
+            height: auto;
           }
+
+          /*#packs-section .add-recurrence{ margin-left: 33.33333333%; }*/
           .pack-recurrence{
             border: 1px solid #E8E8E8;
             border-radius: 5px;
           }
           .pack-recurrence .panel-body{ padding: 1.5em 0em; }
-          .pack-recurrence table,
-          .pack-recurrence table thead,
-          .pack-recurrence table thead tr,
-          .pack-recurrence table thead tr th,
-          .pack-recurrence table tbody,
-          .pack-recurrence table tbody tr,
-          .pack-recurrence table tbody tr td,
-          .pack-recurrence table tfoot,
-          .pack-recurrence table tfoot tr,
-          .pack-recurrence table tfoot tr td{
-            border: 0 none transparent;
-            background-color: white;
-          }
-          .pack-recurrence .pack-pending table tbody tr td{ color: #FF1010; }
-          .pack-recurrence table tbody tr td a,
-          .pack-recurrence table tbody tr td a:hover{
+          .pack-recurrence .pack-pending .pack li p:last-child{ color: #FF1010; }
+          .pack-recurrence .pack li a,
+          .pack-recurrence .pack li a:hover{
             border-radius: unset;
             background-color: unset;
             color: #555;
@@ -517,22 +507,18 @@
             padding: unset;
           }
           .pack-recurrence .pack-pending .pack-payment-method .credit-card p{ color: #FF1010; }
-          .pack-recurrence table thead tr,
-          .pack-recurrence table tbody tr{
-            display: flex;
-            flex-flow: row nowrap;
-          }
-          .pack-recurrence table thead tr th,
-          .pack-recurrence table tbody tr td{
+          .pack-recurrence .pack li{
             font: normal 13px/1.2em "Avenir Next LT Pro";
-            width: 16.6666666667%;
+            padding: 10px 0;
           }
-          .pack-recurrence table tbody tr:first-child td:first-child {
+          .pack-recurrence .pack li:first-child{
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: column nowrap;
           }
-          .pack-recurrence table th:first-child span,
-          .pack-recurrence table th:first-child p{ text-align: center; }
+          .pack-recurrence .pack li:first-child p{ text-align: center; }
+          .pack-recurrence .pack li .darkGray{ margin: 5px auto; }
+          .pack-recurrence .delete-recurrence{ align-self: center; margin: 25px auto 0;}
+          .pack-recurrence .details-recurrence{ align-self: center; margin: 25px auto 0;}
           .pack-recurrence .pack-sign{
             align-self: center;
             border-radius: 50%;
@@ -574,82 +560,66 @@
           .pack-add-new-payment p a{ color: #555; }
         </style>
         <article id="packs-section" class="col-md-10 margin80px">
-          <div class="row">
-            <div class="col-xs-12 col-md-12 col-lg-12">
-              <div class="row">
-                <div class="col-md-12 col-xs-12">
+          <div class="row clearfix">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-9 col-md-offset-1 col-lg-9 col-lg-offset-1">
+              <div class="row clearfix">
+                <div class="col-xs-12 col-md-12">
                   <h3 class="darkPopPurple">Recurrentes</h3>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6 col-xs-12">
+              <div class="row clearfix">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <p class="darkGray">Administra la recurrencia de tus paquetes.</p>
                 </div>
-                <div class="col-md-6 col-xs-12">
-                  <p class="col-md-10">
-                    <a href="agregar" class="botonRojo botonLink" title="Agregar recurrencia" target="_self">Agregar recurrencia</a>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <p class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-9 col-md-offset-1 col-lg-9 col-lg-offset-1 add-recurrence">
+                    <a href="agregar" class="botonRojo botonLink pull-right" title="Agregar recurrencia" target="_self">Agregar recurrencia</a>
                   </p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 col-xs-12"><p></p></div>
-              </div>
-              <div class="row">
-                <article class="pack-recurrence col-md-12 col-xs-12 container-fluid panel panel-default">
-                  <div class="col-md-12 col-xs-12 panel-body table-responsive pack-active">
-                    <table border="0" cellpadding="0" cellspacing="0" class="table col-md-12 col-xs-12">
-                      <thead>
-                        <tr>
-                          <th><p class="darkGray">Activado</p></th>
-                          <th><p class="darkGray">Paquete</p></th>
-                          <th><p class="darkGray">Número</p></th>
-                          <th><p class="darkGray">Activación</p></th>
-                          <th></th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tfoot>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </tfoot>
-                      <tbody>
-                        <tr border="0">
-                          <td>
-                            <span class="pack-sign" aria-hidden="true"></span>
-                          </td>
-                          <td>
-                            Rock 200-$200 <a href="recurrencia-editar" title="Editar" target="_self"><span class="glyphicon glyphicon-pencil" aria-hidden="false"></span></a>
-                          </td>
-                          <td>
-                            55 52687495
-                          </td>
-                          <td>
-                            18/04/17
-                          </td>
-                          <td><a href="recurrencia-eliminar" title="Eliminar" target="_self"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a></td>
-                          <td>
-                            <p>
-                              <a href="recurrencia-detalle" title="Ver detalle" target="_self" class="darkGray seeDetails">Ver Detalle <span class="caret"></span></a>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="pack-details hidden col-md-12 col-xs-12">
-                      <div class="pack-info col-md-12 col-xs-12">
-                        <div class="pack-features col-md-offset-2 col-md-4 col-xs-6">
-                          <ul class="col-md-12 col-xs-12">
+              <div class="row clearfix">
+                <article class="col-xs-12 col-md-12 container-fluid panel panel-default pack-recurrence ">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel-body table-responsive pack-active">
+                    <ul class="col-xs-12 col-sm-11 col-sm-offset-1 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0 pack">
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="col-xs-5 col-sm-12 col-md-12 col-lg-12 darkGray">Activado</p>
+                        <p class="pack-sign text-center center-block" aria-hidden="true"></p>
+                      </li>
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="col-xs-4 col-sm-4 col-md-12 col-lg-12 darkGray">Paquete</p>
+                        <p class="col-xs-7 col-sm-7 col-md-12 col-lg-12">
+                          Rock 200-$200 <a href="recurrencia-editar" title="Editar" target="_self"><span class="glyphicon glyphicon-pencil pull-right text-right" aria-hidden="false"></span></a>
+                        </p>
+                      </li>
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="col-xs-5 col-sm-4 col-md-12 col-lg-12 darkGray">Número</p>
+                        <p class="col-xs-7 col-sm-7 col-md-12 col-lg-12">55 52687495</p>
+                      </li>
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="col-xs-5 col-sm-4 col-md-12 col-lg-12 darkGray">Activación</p>
+                        <p class="col-xs-7 col-sm-7 col-md-12 col-lg-12">18/04/17</p>
+                      </li>
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="visible-xs-inline-block col-xs-10 visible-sm-inline-block col-sm-10 hidden-md hidden-lg darkGray">Eliminar recurrencia</p>
+                        <p class="col-xs-1 col-sm-1 col-md-12 col-lg-12 center-block text-center delete-recurrence">
+                          <a href="recurrencia-eliminar" title="Eliminar" target="_self"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a>
+                        </p>
+                      </li>
+                      <li class="clearfix col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12 details-recurrence">
+                          <a href="recurrencia-detalle" title="Ver detalle" target="_self" class="darkGray seeDetails" aria-expanded="false">Ver Detalle <span class="caret"></span></a>
+                        </p>
+                      </li>
+                    </ul>
+                    <div class="pack-details hidden col-xs-12 col-md-12">
+                      <div class="pack-info col-xs-12 col-md-12">
+                        <div class="pack-features col-xs-12 col-md-4 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+                          <ul>
                             <li>5,000 Megas</li>
                             <li>Música incluída</li>
                             <li>Redes sociales</li>
                             <li>
-                              <p class="pull-left col-md-12 col-xs-12">
+                              <p class="pull-left col-xs-12 col-md-12">
                                 <img src="http://local.virginmobile.mx/images/social-networks.png" alt="Redes sociales incluídas" class="pull-left">
                               </p>
                             </li>
@@ -658,30 +628,35 @@
                             <li>Vigencia: 30 días</li>
                           </ul>
                         </div>
-                        <div class="pack-payment-day col-md-6 col-xs-6">
+                        <div class="pack-payment-day col-xs-12 col-md-4 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
                           <p class="darkGray">Próximo pago</p>
                           <p>18/05/17</p>
                         </div>
                       </div>
-                      <div class="pack-payment-method col-md-12 col-xs-12">
-                        <div class="col-md-offset-2 col-md-10 col-xs-12">
+                      <div class="pack-payment-method col-xs-12 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
                           <p class="darkGray">Método de pago</p>
                         </div>
-                        <div class="credit-card col-md-offset-2 col-md-4 col-xs-6">
+                        <div class="credit-card col-xs-8 col-sm-8 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
                           <p>
                             <img src="http://local.virginmobile.mx/images/visa.png" alt="VISA" class="pull-left"> ···· ···· ···· 0007
                           </p>
                         </div>
-                        <div class="col-md-offset-2 col-md-4 col-xs-6">
-                          <p class="darkGray">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+                          <p class="visible-xs visible-sm hidden-md hidden-lg darkGray">
+                            <a href="" title="Editar" target="_self" class="darkGray">
+                              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </a>
+                          </p>
+                          <p class="hidden-xs hidden-sm visible-md visible-lg darkGray">
                             <a href="" title="Editar" target="_self" class="darkGray">
                               <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
                             </a>
                           </p>
                         </div>
                       </div>
-                      <div class="pack-add-new-payment col-md-12 col-xs-12">
-                        <div class="col-md-offset-6 col-md-6 col-xs-12">
+                      <div class="pack-add-new-payment col-xs-12 col-md-12">
+                        <div class="col-xs-12 col-md-6 col-md-offset-6">
                           <p>
                             <a href="añadir" title="Añadir nuevo método de pago" target="_self" class="darkGray">
                               <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
@@ -702,7 +677,7 @@
             event.preventDefault();
             event.stopPropagation();
 
-            var _hidden = $( event.currentTarget ).closest( "table" ).next( ".pack-details" );
+            var _hidden = $( event.currentTarget ).closest( "ul" ).next( ".pack-details" );
 
             _hidden.toggleClass( "hidden" );
           } );
